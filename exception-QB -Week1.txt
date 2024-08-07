@@ -1,0 +1,67 @@
+Exception-handling
+
+com.verizon.model package
+
+1. public class Activity{
+  	private  Integer string1;
+  	private Integer string2;
+  	private String operator;
+
+ 	// provide default and all-arg constructor
+ 	//provide getter and setter methods
+
+	}
+
+ 
+com.verizon.exception package
+
+2. Create a custom exception InvalidDataException
+  Create a custom exception OperatorException
+
+
+
+ com.verizon.ui package
+
+3. 
+public class Source {  
+
+  public static void main(String args[] )  {
+   	 Activity activity = new Activity(10,20,,"+);	  
+	 Source source= new Source();
+	try{
+	 	if(!source.validate(activity)){
+			throw new OperatorException("Invalid Operator");
+	 	}
+	 	
+		String result=source.doOperation(activity);
+		System.out.println(result);
+		
+	}catch(OperatorException e){
+		e.printStackTrace();
+	}	
+   
+   } 
+
+ public boolean validate(Activity activity)  {
+  
+    /*
+	if number1 or number2 or operator are null, throw InvalidNumberException and return false, also
+        if operator is other than + or - , throw OperatorException and return false
+        if no exception, return true
+    */
+    
+  }
+
+
+
+ public String doOperation(Activity activity){
+
+	/* if operator  is + , returns sum .
+	If operator is - , returns return difference
+	*/
+
+ }
+
+
+ 
+}
